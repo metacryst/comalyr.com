@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Comal County Young Republicans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="_/logo.svg">
     <link rel="stylesheet" href="">
     <script type="module" src=""></script>
@@ -13,12 +14,46 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        .title {
+            font-size: 3em;
+        }
+    
+        .hero {
+            display: flex;
+            flex-direction: row;
+            position: absolute; 
+            top: 50vh; 
+            left: 50vw; 
+            transform: translate(-50%, -50%);
+        }
+
+        .main-image {
+            width: 15vw;
+        }
+
+        @media screen and (max-width: 600px) {
+            .title {
+                font-size: 2em;
+            }
+
+            .hero {
+                top: 45vh; 
+                flex-direction: column;
+                gap: 1em
+            }
+
+            .main-image {
+                width: 60vw;
+            }
+        }
+
     </style>
   </head>
   <body style="background-color: #FFD3AC; font-family: InstrumentSerif;">
-    <div style="position: absolute; top: 50vh; left: 50vw; transform: translate(-50%, -50%); display: flex; flex-direction: row;">
-        <p style="font-size: 3em">Comal County Young Republicans</p>
-        <img src="_/logo.svg" style="width: 15vw;"/>
+    <div class="hero">
+        <p class="title">Comal County Young Republicans</p>
+        <img class="main-image" src="_/logo.svg"/>
         <div style="font-family: Instrument Serif; position: absolute; display: flex; flex-direction: row; gap: 1em;">
             <style>
                 a {

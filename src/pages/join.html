@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Join – Comal County Young Republicans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="_/logo.svg">
+    <style>
+      @font-face {
+        font-family: 'InstrumentSerif';
+        src: url('_/InstrumentSerif/InstrumentSerif-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #FFD3AC;
+        font-family: 'InstrumentSerif', serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+      }
+
+      form {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 400px;
+        background: rgb(255, 241, 231);
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      }
+
+      label {
+        text-align: left;
+        font-size: 1em;
+        margin-bottom: 0.25em;
+      }
+
+      .required {
+        color: #b80000;
+      }
+
+      input {
+        padding: 0.6em;
+        border: 1px solid #ccc;
+        background-color: rgb(255, 241, 231);
+        border-radius: 4px;
+        font-family: 'InstrumentSerif', serif;
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+
+      button {
+        background-color: #b80000;
+        color: rgb(255, 241, 231);
+        border: none;
+        padding: 0.8em;
+        font-family: 'InstrumentSerif', serif;
+        font-size: 1.1em;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #900000;
+      }
+
+      @media screen and (max-width: 600px) {
+        .hero {
+            justify-content: start;
+        }
+
+        .title {
+          font-size: 2em;
+        }
+
+        form {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="hero">
+      <p class="title">Join Us</p>
+      <form>
+        <label for="fname">First Name <span class="required">*</span></label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name <span class="required">*</span></label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="phone">Phone <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
+  </body>
+</html>
